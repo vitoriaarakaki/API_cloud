@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    border-bottom-left-radius:20px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(#021027, #000000);
+    background-image: url("https://topprodutor.com.br/wp-content/uploads/2020/07/2-23422_blur-background-resolution-hd-4k-wallpapers-abstract-blue.jpg");
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image {
+    border-top-left-radius:20px ;
+    border-bottom-left-radius:20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01153469;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 31rem;
+}
+
+.form {
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #ffffff44;
+    padding: 1rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px ;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.login-button button {
+    border: none;
+    background-color: #f1a20b;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: #f1a20b;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color:  #f1a20b;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid   #f1a20b;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #f1a20b;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color:   #f1a20b;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
+.box {
+   
+    position: relative;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1;
+   }
+   
+   .box::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+   }
+   
+   .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+   }
+   
+   .box:hover:before,
+   .box:hover:after {
+    transform: skewX(0deg) scaleX(1.3);
+   }
+   
+   .box:before,
+   .box:after {
+    background: linear-gradient(315deg, #01153469, #f1a10b9f)
+   }
+   
+   .box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+   }
+   
+   .box span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.1s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+   }
+   
+   .box span::before {
+    top: -40px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+   }
+   
+   .box span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    animation-delay: -1s;
+   }
+   
+   .box span:after {
+    bottom: -40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+   }
+   
+   .box .content {
+    position: relative;
+    width: 190px;
+    height: 254px;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .box .content h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+   }
